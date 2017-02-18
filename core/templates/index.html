@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{%block container%}
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+    <div class="form-group">
+        <select class="form-control">
+            <option value="1">repertorio 1</option>
+            <option value="2">repertorio 2</option>
+            <option value="3">repertorio 3</option>
+        </select>
+    </div>
+
+    <div id="sortable">
+        <div class="musicard">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Nome da Musica
+                        </div>
+                        <div class="col-md-3">
+                            Nome do artista
+                        </div>
+                        <div class="col-md-4">
+                            <p>Tom: D <i class="fa fa-trash fa-lg" aria-hidden="true"></i> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        cifra
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="musicard">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Nome da Musica
+                        </div>
+                        <div class="col-md-3">
+                            Nome do artista
+                        </div>
+                        <div class="col-md-4">
+                            <p>Tom: C <i class="fa fa-trash fa-lg" aria-hidden="true"></i> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fa fa-chevron-down  fa-lg" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        cifra
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%endblock%}

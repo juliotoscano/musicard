@@ -1,0 +1,29 @@
+.menu-lateral{
+    padding-left: 40px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.menu-lateral i{
+    margin-top: 5px;
+    float: right;
+}
+.musicard{
+    margin-bottom: 20px;
+}
+.musicard .panel i{
+    margin-left: 50px;
+    margin-top: 5px;
+    color: #f16565;
+}
+.musicard .panel .fa-clock-o{
+    color: #999;
+}
+.musicard .panel .fa-chevron-down, .fa-chevron-up {
+    margin-right: 20px;
+    color: #FFFFFF;
+    float: right;
+}
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+}

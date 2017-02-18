@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block container%}
+
+<form method="get" accept-charset="utf-8">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" placeholder="nome">
+    </div>
+    <div class="form-group">
+        <label>Buscar</label>
+        <input type="text" class="form-control" id="busca" placeholder="letra da musica, artista, nome, etc ">
+    </div>
+    <div class="list-group" id="resultado">
+        <p><span class="label label-default">Resultado:</span></p>
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item">...</li>
+            </ul>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-default">Salvar</button>
+</form>
+<table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nome</th>
+                <th>Artista</th>
+                <th>Tom</th>
+                <th>Duracao media</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Facil de entender</td>
+                <td>Jorge Vercillo</td>
+                <td>C</td>
+                <td>2m30s</td>
+                <td><i class="fa fa-trash fa-lg" aria-hidden="true"></i></td>
+            </tr>
+        </tbody>
+</table>
+
+{%endblock%}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static i18n %}
+
+<html>
+    <head>
+        <title>Musicard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="{% static 'js/bootstrap.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/application.js' %}" type="text/javascript"></script>
+        <script src="{% static 'js/repertory.js' %}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{% static 'css/font-awesome-4.6.3/css/font-awesome.min.css' %}">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h1>Musicard</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="menu-lateral">
+                    <div class="list-group">
+                        <a href="{% url 'home'%}" class="list-group-item">Repertorio <i class="fa fa-bars fa-lg" aria-hidden="true"></i></a>
+                        <!--<a class="list-group-item">Buscador <i class="fa fa-search fa-lg" aria-hidden="true"></i></a>
+                        <a class="list-group-item">Pedidos <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>-->
+                        <a href="{% url 'criarepertorio'%}" class="list-group-item">Criar repertório <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                {%block container%}{%endblock%}
+            </div>
+        </div>
+    
+    </body>
+</html>
