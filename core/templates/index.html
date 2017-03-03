@@ -2,19 +2,21 @@
 {%load static%}
 
 {%block container%}
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
-    <div class="form-group">
-        <select class="form-control">
-            <option value="1">repertorio 1</option>
-            <option value="2">repertorio 2</option>
-            <option value="3">repertorio 3</option>
-        </select>
-    </div>
 
+<div class="form-group">
+    <select class="form-control">
+        <option value="1">repertorio 1</option>
+        <option value="2">repertorio 2</option>
+        <option value="3">repertorio 3</option>
+    </select>
+</div>
+<p><button class="btn btn-success play">Play <i class="fa fa-play" aria-hidden="true"></i></button></p>
+
+<div class="panel-group" id="accordion" role="tablist">
     <div id="sortable">
         <div class="musicard">
             <div class="panel panel-primary">
-                <div class="panel-heading" role="tab" id="headingOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <div class="panel-heading" role="tab" id="heading_1" data-toggle="collapse" data-parent="#accordion" href="#collapse_1" aria-expanded="false" aria-controls="collapse_1">
                     <div class="row">
                         <div class="col-md-3">
                             Nome da Musica
@@ -30,16 +32,16 @@
                         </div>
                     </div>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div id="collapse_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_1">
                     <div class="panel-body">
-                        cifra
+                        cifra 
                     </div>
                 </div>
             </div>
         </div>
         <div class="musicard">
             <div class="panel panel-primary">
-                <div class="panel-heading" role="tab" id="headingTwo" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <div class="panel-heading" role="tab" id="heading_2" data-toggle="collapse" data-parent="#accordion" href="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
                     <div class="row">
                         <div class="col-md-3">
                             Nome da Musica
@@ -55,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div id="collapse_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_2">
                     <div class="panel-body">
                         cifra
                     </div>

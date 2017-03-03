@@ -20,4 +20,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^$', views.index, name='home'),
     url(r'^criarepertorio/$', views.Create_repertorio, name='criarepertorio'),
+    url(r'^admin/', admin.site.urls),
 ]

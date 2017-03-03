@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'musicard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'musicard',
+        'USER': 'juliotoscano',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -130,3 +134,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'staticfiles')
+
+# Files
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
+MEDIA_URL = '/uploads/'
