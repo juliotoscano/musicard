@@ -138,3 +138,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT,'staticfiles')
 # Files
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'uploads')
 MEDIA_URL = '/uploads/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
