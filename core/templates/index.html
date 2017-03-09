@@ -14,56 +14,33 @@
 
 <div class="panel-group" id="accordion" role="tablist">
     <div id="sortable">
-        <div class="musicard">
-            <div class="panel panel-primary">
-                <div class="panel-heading" role="tab" id="heading_1" data-toggle="collapse" data-parent="#accordion" href="#collapse_1" aria-expanded="false" aria-controls="collapse_1">
-                    <div class="row">
-                        <div class="col-md-3">
-                            Nome da Musica
-                        </div>
-                        <div class="col-md-3">
-                            Nome do artista
-                        </div>
-                        <div class="col-md-4">
-                            <p>Tom: D <i class="fa fa-trash fa-lg" aria-hidden="true"></i> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></p>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div id="collapse_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_1">
-                    <div class="panel-body">
-                        cifra 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="musicard">
-            <div class="panel panel-primary">
-                <div class="panel-heading" role="tab" id="heading_2" data-toggle="collapse" data-parent="#accordion" href="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
-                    <div class="row">
-                        <div class="col-md-3">
-                            Nome da Musica
-                        </div>
-                        <div class="col-md-3">
-                            Nome do artista
-                        </div>
-                        <div class="col-md-4">
-                            <p>Tom: C <i class="fa fa-trash fa-lg" aria-hidden="true"></i> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></p>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fa fa-chevron-down  fa-lg" aria-hidden="true"></i>
+        {% for music in musics %}
+            <div class="musicard">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" id="heading_{{music.id}}" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{music.id}}" aria-expanded="false" aria-controls="collapse_{{music.id}}">
+                        <div class="row">
+                            <div class="col-md-3">
+                                {{music.name}}
+                            </div>
+                            <div class="col-md-3">
+                                {{music.artist}}
+                            </div>
+                            <div class="col-md-4">
+                                <p>Tom: {{music.tone}} <i class="fa fa-trash fa-lg" aria-hidden="true"></i> <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></p>
+                            </div>
+                            <div class="col-md-2">
+                                <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="collapse_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_2">
-                    <div class="panel-body">
-                        cifra
+                    <div id="collapse_{{music.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_{{music.id}}">
+                        <div class="panel-body">
+                            {{music.musicFile}} 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 
 </div>

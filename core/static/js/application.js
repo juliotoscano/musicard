@@ -11,8 +11,16 @@ function clock(minuto, segundo) {
         var id = $('.musicard').find('.in').attr('id');
         console.log(id);
         $('.panel-collapse').collapse('hide');
-
-        $('#collapse_2').collapse('show');
+        i=0;
+        while(id!=listMusic[i]&&i<listMusic.length){
+            i++;
+        }
+        if(i == listMusic.length){
+            window.clearInterval(intervalo);
+        }else{
+            id = '#'+listMusic[i+1];
+            $(id).collapse('show');
+        }
     }
 
     intervalo = window.setInterval(function() {
@@ -53,7 +61,7 @@ function clock(minuto, segundo) {
 
     //Se houver o evento para esconder o collapse, entao sera acionado para que o evento de intervalo pare.
     $('.panel-collapse').on('hidden.bs.collapse', function () {
-        //window.clearInterval(intervalo);
+        //
         $(this).find('.panel-body').html(' cifra');
     });
 };
@@ -65,9 +73,15 @@ $(function() {
     //Identifica quando o collapse fechar, primeiro muda o icone depois insere o relogio e chama a funcao.
     //Quando fechar muda o icone. A desativacao do relogio esta sendo feito na propria funcao
 
+    listMusic = []
+    $('.musicard').find('.collapse').each(function(){
+        listMusic.push($(this).attr('id'))
+    });
+
     $('.play').on('click',function () {
-        var card = $('.musicard').first().find('.collapse').addClass('in');
-        $(card).trigger('show.bs.collapse');
+        var card = '#'+listMusic[0];
+        $(card).addClass('in');
+        $(card).trigger('show.bs.collapse',listMusic);
     })
 
     $('.panel-collapse').on('show.bs.collapse', function () {
